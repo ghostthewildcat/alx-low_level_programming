@@ -1,43 +1,32 @@
-#include "main.h"
+#ifndef MAIN_H
+#define MAIN_H
 
 /**
- * weigh - Entry point
- * @a: index 1
- * @b: index 2
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
  *
- * Return: 1 if palindrome true, 0 if false.
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-int weigh(char *a, char *b)
-{
-	if (a >= z)
-		return (1);
-	if (*a == *z)
-		return (weigh(a + 1, z - 1));
 
-	return (0);
-}
+int _putchar(char c);
 
 /**
- * _strlen - Entry point
- * @s: string
- * Return: length of string
+ * _puts_recursion - Entry point
+ * @s: string to print
+ *
+ * Description: prints a string, followed by a new line.
+ * Return: Always 0.
  */
-int _strlen(char *s)
-{
-	if (*s == '\0')
-		return (0);
-	s++;
-	return (1 + (_strlen(s)));
-}
 
-/**
- * is_palindrome - Entry point
- * @s: string to check
- * Return: 1 if palindrome, or 0 if false.
- */
-int is_palindrome(char *s)
-{
-	int len = _strlen(s);
+void _puts_recursion(char *s);
+void _print_rev_recursion(char *s);
+int _strlen_recursion(char *s);
+int factorial(int n);
+int _pow_recursion(int x, int y);
+int _sqrt_recursion(int n);
+int is_prime_number(int n);
+int is_palindrome(char *s);
+int wildcmp(char *s1, char *s2);
 
-	return (weigh(s, (s +len - 1)));
-}
+#endif
